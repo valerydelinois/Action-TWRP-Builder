@@ -14,11 +14,11 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/valerydelinois/android_device_samsung_a32xu'
+        default: 'https://github.com/valerydelinois/android_device_samsung_a32x'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'android-11'
+        default: 'a32xktt-user-12-SP1A.210812.016-A326KKSU4DWB7-release-keys'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
@@ -101,8 +101,8 @@ jobs:
         mkdir workspace
         cd workspace
         echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
-        git config --global user.name "Nico170420"
-        git config --global user.email "b170420nc@gmail.com"
+        git config --global user.name "valerydelinois"
+        git config --global user.email "valerydelinois@gmail.com"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
       id: pwd
           
